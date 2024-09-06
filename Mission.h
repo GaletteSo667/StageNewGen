@@ -1,9 +1,9 @@
 /*****************************************************************//**
  * \file   Mission.h
- * \brief  Declaration de la classe Mission
- * 
+ * \brief  Déclaration de la classe Mission
+ *
  * \author Yanis
- * \date   2024
+ * \date    2024
  *********************************************************************/
 
 #ifndef MISSION_H
@@ -11,52 +11,49 @@
 #include <iostream>
 #include <string>
 
+ /*! \class Mission
+     * \brief Classe représentant une mission avec 3 attributs privés
+     *
+     * Cette classe a une finalité pédagogique :
+     * \li Rappel du C++
+     * \li Commentaire avec Doxygen
+     * \li Git, Github
+     */
+class Mission {
 
- /*! \class MISSION
-    * \brief classe representant une mission. 2 attributs prives
-    * 
-    * Cette classe a une finalite pedagogique : 
-    * \li : Rappel du C++
-    * \li : commentaire avec Doxygen
-    * \li : git, github
-    */
-class Mission
-{
+private:
+    /**
+     * Membre privé nomMission : contient le nom de la mission
+     */
+    std::string nomMission;
 
-    private:
-        /**
-         * Membre prive nomEntreprise : contient le nombre de personne
-         */
-        std::string nbPersonne; 
-        /**
-         * Membre prive descriptifMission : contient le descriptif de la mission
-         */
-        std::string descriptifMission; 
-        /**
-         * Membre prive nbPersonne : contient le nombre de personnes
-         */
+    /**
+     * Membre privé dureeMission : contient la durée de la mission en mois
+     */
+    int dureeMission;
 
-        std::string nbPersonne;
-        
+    /**
+     * Membre privé nbPersonne : contient le nombre de personnes impliquées dans la mission
+     */
+    int nbPersonne;
 
+public:
+    /* Classe sous forme canonique */
+    Mission();
+    ~Mission();
+    Mission(const Mission& other);
+    Mission& operator = (const Mission& other);
 
-    protected : 
+    Mission(std::string nom, int duree);
 
+    std::string getNomMission();
+    void setNomMission(std::string nouveauNom);
 
+    int getDureeMission();
+    void setDureeMission(int nouvelleDuree);
 
-    public:
-        /*Classe sous forme canonique*/
-        Entreprise();   
-        ~Entreprise();  
-        Entreprise(const Entreprise& entre); 
-        Entreprise &operator = (const Entreprise& entre); 
-
-        Entreprise(std::string nom, std::string ville); 
-        std::string getNomEntreprise();
-        void setEntreprise(std::string nouveauNom);
-        std::string getVilleEntreprise();
-        void setVilleEntreprise(std::string nouvelleVille);
-       
+    int getNbPersonne();
+    void setNbPersonne(int nombre);
 };
 
 #endif
