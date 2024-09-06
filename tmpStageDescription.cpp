@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   tmpStageDescription
+ * \brief  Main
+ *
+ * \author Yanis
+ * \date   2024
+ *********************************************************************/
+
 #include <iostream>
 #include "Entreprise.h"
 #include "Mission.h"
