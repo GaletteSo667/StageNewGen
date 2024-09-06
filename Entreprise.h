@@ -2,7 +2,7 @@
  * \file   Entreprise.h
  * \brief  Declaration de la classe entreprise
  * 
- * \author Pierre
+ * \author 
  * \date   June 2023
  *********************************************************************/
 

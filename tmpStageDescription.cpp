@@ -1,20 +1,29 @@
-// tmpStageDescription.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
-//
-
 #include <iostream>
+#include "Entreprise.h"
+#include "Mission.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+int main() {
+    Entreprise e1;
+    Entreprise e2("Entreprise", "ville");
+
+    cout << e1.getNomEntreprise() << ", " << e1.getVilleEntreprise() << endl;
+    cout << e2.getNomEntreprise() << ", " << e2.getVilleEntreprise() << endl;
+
+    e1.setEntreprise("Entreprise .");
+    e1.setVilleEntreprise("Ville");
+    cout << e1.getNomEntreprise() << ", " << e1.getVilleEntreprise() << endl;
+
+    Mission m1;
+    Mission m2("Mission", 6);
+
+    cout << m1.getNomMission() << ", " << m1.getDureeMission() << " mois" << endl;
+    cout << m2.getNomMission() << ", " << m2.getDureeMission() << " mois" << endl;
+
+    m1.setNomMission("Mission");
+    m1.setDureeMission(3);
+    cout << m1.getNomMission() << ", " << m1.getDureeMission() << " mois" << endl;
+
+    return 0;
 }
-
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
-// Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
-
-// Astuces pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
